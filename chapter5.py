@@ -1,4 +1,4 @@
-*-------------Chapter5-pandas----------*
+*             Chapter5-pandas             *
 In [2]: import pandas as pd
         obj = pd.Series([4,7,-5,3])
 In [3]: obj
