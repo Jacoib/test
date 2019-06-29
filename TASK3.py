@@ -53,7 +53,7 @@ foo	9	10	11	12
 将多个列做成一个层次化索引，只需传入由列编号或列名组成的列表即可：
 
 In [28]:
-!type examples\csv_mindex
+type examples
 key1,key2,value1,value2
 out[28]:
 one,a,1,2
