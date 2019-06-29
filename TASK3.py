@@ -4,7 +4,7 @@ In [10]:import numpy as np
 				import pandas as pd 
 				from pandas import Series,DataFrame
 				
-In [16]:type examples\ex1
+In [16]:type examples
 a,b,c,d,message
 1,2,3,4,hello
 5,6,7,8,world
@@ -24,7 +24,7 @@ a	b	c	d	message
 1	5	6	7	8	world
 2	9	10	11	12	foo
 
-In [21]:!type examples\ex2
+In [21]:type examples
 1,2,3,4,hello
 5,6,7,8,world
 9,10,11,12,foo
