@@ -1,40 +1,40 @@
-*-------文件加载、存储与文件格式-------*
+*文件加载、存储与文件格式*
 
 In [10]:import numpy as np
 				import pandas as pd 
 				from pandas import Series,DataFrame
 				
-In [16]:!type examples\ex1.csv
+In [16]:type examples\ex1
 a,b,c,d,message
 1,2,3,4,hello
 5,6,7,8,world
 9,10,11,12,foo
 
-In [18]:df = pd.read_csv('examples\ex1.csv')
+In [18]:df = pd.read_csv('examples\ex1)
 				df   #以逗号分隔，使用read_csv将其读入一个DataFrame
 Out[18]:
 a	b	c	d	message
 0	1	2	3	4	hello
 1	5	6	7	8	world
 2	9	10	11	12	foo
-In [129]:pd.read_table('ex\ex1.csv',sep=',')  
+In [129]:pd.read_table('ex\ex1',sep=',')  
 Out[129]:
 a	b	c	d	message
 0	1	2	3	4	hello
 1	5	6	7	8	world
 2	9	10	11	12	foo
 
-In [21]:!type examples\ex2.csv
+In [21]:!type examples\ex2
 1,2,3,4,hello
 5,6,7,8,world
 9,10,11,12,foo
-In [23]:	pd.read_csv('examples\ex2.csv',header=None)   #读入该文件可以让pandas为其分配默认的列名
+In [23]:	pd.read_csv('examples\ex2',header=None)   #读入该文件可以让pandas为其分配默认的列名
 Out[23]:
 0	1	2	3	4
 0	1	2	3	4	hello
 1	5	6	7	8	world
 2	9	10	11	12	foo
-In [25]:	pd.read_csv('examples\ex2.csv',names=['a','b','c','d','messags']) #也可以用names=[] 为其定义列名
+In [25]:	pd.read_csv('examples\ex2',names=['a','b','c','d','messags']) #也可以用names=[] 为其定义列名
 Out[25]:
 a	b	c	d	messags
 0	1	2	3	4	hello
@@ -43,7 +43,7 @@ a	b	c	d	messags
 
 In [27]:
 names = ['a','b','c','d','message']
-pd.read_csv('examples\ex2.csv',names=names,index_col='message') #index_col  索引列
+pd.read_csv('examples\ex2',names=names,index_col='message') #index_col  索引列
 Out[27]:
 a	b	c	d
 message				
@@ -53,7 +53,7 @@ foo	9	10	11	12
 将多个列做成一个层次化索引，只需传入由列编号或列名组成的列表即可：
 
 In [28]:
-!type examples\csv_mindex.csv
+!type examples\csv_mindex
 key1,key2,value1,value2
 out[28]:
 one,a,1,2
@@ -65,7 +65,7 @@ two,b,11,12
 two,c,13,14
 two,d,15,16
 In [29]:
-parsed=pd.read_csv('examples\csv_mindex.csv',index_col = ['key1','key2'])
+parsed=pd.read_csv('examples\csv_mindex',index_col = ['key1','key2'])
 parsed
 Out[29]:
 value1	value2
@@ -97,7 +97,7 @@ bbb	0.927272	0.302904	-0.032399
 ccc	-0.264273	-0.386314	-0.217601
 ddd	-0.871858	-0.348382	1.100491
 In [32]:
-!type examples\ex4.csv
+!type examples\ex4
 # hey!
 a,b,c,d,message
 # just wanted to make things more difficult for you
@@ -106,7 +106,7 @@ a,b,c,d,message
 5,6,7,8,world
 9,10,11,12,foo
 In [33]:
-pd.read_csv('examples\ex4.csv',skiprows=[0,2,3]) #用skiprows=[] 来跳过文件的哪些行
+pd.read_csv('examples\ex4',skiprows=[0,2,3]) #用skiprows=[] 来跳过文件的哪些行
 Out[33]:
 a	b	c	d	message
 0	1	2	3	4	hello
